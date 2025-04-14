@@ -6,7 +6,7 @@ void main() {
 }
 
 class SimpleCrmApp extends StatelessWidget {
-  const SimpleCrmApp({super.key});
+  const SimpleCrmApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,8 @@ class Order {
 }
 
 class CustomerListScreen extends StatefulWidget {
-  const CustomerListScreen({super.key});
+  const CustomerListScreen({Key? key}) : super(key: key);
+
 
   @override
   State<CustomerListScreen> createState() => _CustomerListScreenState();
@@ -198,7 +199,11 @@ class _CustomerListScreenState extends State<CustomerListScreen> {
 
 class CustomerDetailScreen extends StatefulWidget {
   final Customer customer;
-  const CustomerDetailScreen({required this.customer, super.key});
+  const CustomerDetailScreen({
+    required this.customer,
+    Key? key,
+  }) : super(key: key);
+
 
   @override
   State<CustomerDetailScreen> createState() => _CustomerDetailScreenState();
@@ -315,7 +320,11 @@ class _CustomerDetailScreenState extends State<CustomerDetailScreen> {
 class RegisterCustomerScreen extends StatefulWidget {
   final Function(Customer) onRegister;
 
-  const RegisterCustomerScreen({required this.onRegister, super.key});
+  const RegisterCustomerScreen({
+    required this.onRegister,
+    Key? key,
+  }) : super(key: key);
+
 
   @override
   State<RegisterCustomerScreen> createState() => _RegisterCustomerScreenState();
