@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 void main() => runApp(UserApp());
 
 class UserApp extends StatelessWidget {
-  const UserApp({super.key});
+  const UserApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class UserApp extends StatelessWidget {
 }
 
 class UserListPage extends StatefulWidget {
-  const UserListPage({super.key});
+  const UserListPage({Key? key}) : super(key: key);
 
   @override
   _UserListPageState createState() => _UserListPageState();
@@ -131,7 +131,8 @@ class _UserListPageState extends State<UserListPage> {
 class UserDetailPage extends StatelessWidget {
   final dynamic user;
 
-  const UserDetailPage({super.key, required this.user});
+  const UserDetailPage({Key? key, required this.user}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
