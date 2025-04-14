@@ -191,11 +191,11 @@ class MovieDetail extends StatefulWidget {
   final double currentRating;
 
   const MovieDetail({
-    super.key,
+    Key? key,
     required this.movie,
     required this.index,
     required this.currentRating,
-  });
+  }) : super(key: key);
 
   @override
   _MovieDetailState createState() => _MovieDetailState();
